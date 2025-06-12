@@ -1,0 +1,50 @@
+<!-- app/src/main/res/values/strings.xml -->
+<resources>
+    <string name="app_name">Ticket Scanner</string>
+
+    <!-- Main Activity -->
+    <string name="instruction_scan">Position QR code within the frame</string>
+    <string name="instruction_validating">Checking ticket validity</string>
+    <string name="instruction_approved">Entry approved</string>
+    <string name="instruction_denied">Entry denied</string>
+
+    <!-- Status Messages -->
+    <string name="status_ready">Ready to scan tickets</string>
+    <string name="status_scanning">Validating...</string>
+    <string name="status_valid">✅ VALID TICKET</string>
+    <string name="status_invalid">❌ INVALID TICKET</string>
+    <string name="status_revoked">🚫 REVOKED TICKET</string>
+    <string name="status_error">⚠️ ERROR</string>
+
+    <!-- Details Messages -->
+    <string name="details_ready">Point camera at QR code</string>
+    <string name="details_scanning">Please wait</string>
+    <string name="details_valid">Allow entry</string>
+    <string name="details_invalid">Deny entry</string>
+    <string name="details_revoked">Deny entry</string>
+    <string name="details_error">Try again</string>
+
+    <!-- Buttons -->
+    <string name="button_reset">Reset Scanner</string>
+    <string name="button_retry">Try Again</string>
+
+    <!-- Errors -->
+    <string name="error_camera_permission">Camera permission is required for QR scanning</string>
+    <string name="error_camera_failed">Failed to start camera</string>
+    <string name="error_validation_failed">Validation failed</string>
+    <string name="error_network">Network error occurred</string>
+    <string name="error_invalid_qr">Invalid QR code format</string>
+
+    <!-- Ticket Info -->
+    <string name="ticket_number">Ticket #%1$d</string>
+    <string name="event_name">Event: %1$s</string>
+    <string name="holder_name">Holder: %1$s</string>
+    <string name="venue_info">Venue: %1$s</string>
+
+    <!-- Validation Messages -->
+    <string name="validation_success">Ticket is valid for entry</string>
+    <string name="validation_invalid">Ticket is not valid</string>
+    <string name="validation_revoked">Ticket has been revoked</string>
+    <string name="validation_expired">Event has ended</string>
+    <string name="validation_not_found">Ticket not found</string>
+</resources>
