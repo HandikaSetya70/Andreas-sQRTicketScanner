@@ -13,10 +13,10 @@
         android:id="@+id/surfaceView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/statusContainer"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/instructionText" />
 
     <!-- Scanning Overlay -->
     <View
@@ -24,10 +24,10 @@
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:background="@drawable/scanning_overlay"
-        app:layout_constraintTop_toTopOf="@+id/surfaceView"
-        app:layout_constraintBottom_toBottomOf="@+id/surfaceView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="@id/surfaceView"
+        app:layout_constraintBottom_toBottomOf="@id/surfaceView"
+        app:layout_constraintStart_toStartOf="@id/surfaceView"
+        app:layout_constraintEnd_toEndOf="@id/surfaceView" />
 
     <!-- Instructions -->
     <TextView
@@ -48,13 +48,13 @@
     <LinearLayout
         android:id="@+id/statusContainer"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_height="2000dp"
         android:background="#FFFFFF"
+        android:orientation="vertical"
         android:padding="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/surfaceView">
 
         <!-- Status Indicator -->
         <View
@@ -62,41 +62,41 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_gravity="center"
-            android:background="@drawable/status_neutral"
-            android:layout_marginBottom="16dp" />
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/status_neutral" />
 
         <!-- Status Text -->
         <TextView
             android:id="@+id/statusText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
             android:text="Ready to scan tickets"
-            android:textSize="18sp"
             android:textAlignment="center"
-            android:textStyle="bold"
-            android:layout_marginBottom="8dp" />
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <!-- Details Text -->
         <TextView
             android:id="@+id/detailsText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
             android:text="Point camera at QR code"
-            android:textSize="14sp"
             android:textAlignment="center"
             android:textColor="#666666"
-            android:layout_marginBottom="16dp" />
+            android:textSize="14sp" />
 
         <!-- Ticket Info Container -->
         <LinearLayout
             android:id="@+id/ticketInfoContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:visibility="gone"
+            android:layout_marginBottom="16dp"
             android:background="#F5F5F5"
+            android:orientation="vertical"
             android:padding="12dp"
-            android:layout_marginBottom="16dp">
+            android:visibility="gone">
 
             <TextView
                 android:id="@+id/ticketNumber"
@@ -122,11 +122,11 @@
         <!-- Reset Button -->
         <Button
             android:id="@+id/resetButton"
+            style="@style/Widget.Material3.Button.OutlinedButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Reset Scanner"
-            android:visibility="gone"
-            style="@style/Widget.Material3.Button.OutlinedButton" />
+            android:visibility="gone" />
 
     </LinearLayout>
 
